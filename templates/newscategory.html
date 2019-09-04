@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+{% block content %}
+
+<div class="container newscategory">
+    <div class="htag toprow">
+        <h3>{{categoryyNews[0].category.name}} haberleri</h3>
+  
+        <hr>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner"></div>
+                    {% for news in categoryyNews %}
+                        <div class="carousel-item {% if loop.index == 1 %} active{% else %} -item{% endif %}">
+                                <a href="/{{news.category.name}}/{{slugify(news.title, to_lower=True)}}-{{news.id}}">
+                                    <img class="d-block w-100" src="{{ news.hrimage }}" style="width:100%">
+                                </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            
+    </div>
+
+</div>
+
+{% endblock content %}

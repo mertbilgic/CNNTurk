@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+            <div class="slideshow-container">
+                {% for news in topMansetNews %}
+                    <div class="mySlides">
+                        <a href="/{{news.category.name}}/{{slugify(news.title, to_lower=True)}}-{{news.id}}">
+                            <img src="{{ news.hrimage }}" style="width:100%">
+                        </a>
+                    </div>
+                {% endfor %}
+
+                <div class="sliderbtn" id="mySlides">
+                </div>
+              
+            </div>
+    </div>
+
+    <div class="row rowtop">
+
+        <div class="col-md-4 col-sm-6">
+            <div class="row">
+
+                <div class="col-md-6 d-sm-none d-md-block">
+                    <a href="/{{tripleNews[0].category.name}}/{{slugify(tripleNews[0].title, to_lower=True)}}-{{tripleNews[0].id}}">
+                        <p>{{tripleNews[0].title}}</p>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-sm-12">
+                    <a href="/{{tripleNews[0].category.name}}/{{slugify(tripleNews[0].title, to_lower=True)}}-{{tripleNews[0].id}}">
+                        <img src="{{tripleNews[0].sqimage}}" width="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-sm-6">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <a href="/{{tripleNews[1].category.name}}/{{slugify(tripleNews[1].title, to_lower=True)}}-{{tripleNews[1].id}}">
+                                <p>{{tripleNews[1].title}}</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <a href="/{{tripleNews[1].category.name}}/{{slugify(tripleNews[1].title, to_lower=True)}}-{{tripleNews[1].id}}">
+                                <img src="{{tripleNews[1].sqimage}}" width="100%">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <a href="/{{tripleNews[2].category.name}}/{{slugify(tripleNews[2].title, to_lower=True)}}-{{tripleNews[2].id}}">
+                                    <p>{{tripleNews[2].title}}</p>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                            <a href="/{{tripleNews[2].category.name}}/{{slugify(tripleNews[2].title, to_lower=True)}}-{{tripleNews[2].id}}">
+                                <img src="{{tripleNews[2].sqimage}}" width="100%">
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row rowtop">
+            <div class="col-md-12 col-lg-8 col-sm-12">
+
+                <div class="slideshow2-container">
+                    {% for news in midMansetNews %}
+                        <div class="mySlides2">
+                            <a href="/{{news.category.name}}/{{slugify(news.title, to_lower=True)}}-{{news.id}}">
+                                <img src="{{ news.sqimage }}" style="width:100%">
+                            </a>
+                        </div>
+                    {% endfor %}
+                    <!--
+                        javascript ile gelen liste aynı zamanda haraket özelliğini kullanmamızı sağlıyor
+                    -->
+                    
+                    <div class="sliderbtn" id="mySlides2">
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor d-none d-sm-block d-md-block d-lg-none d-xl-none">
+                <div class="row">
+
+                    <div class="col d-none d-md-block">
+                        <a href="#">Ekonomi</a>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+                                            
+                            <div class="col-5">
+                                <a href="#">BIST</a>
+                            </div>
+        
+                            <div class="col-7">
+                                97622.90 
+                                <span>1.81</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="row">
+
+                            <div class="col-5">
+                                <a href="#">EURO</a>
+                            </div>
+                            <div class="col-7">
+                                97622.90 
+                                <span>1.81</span>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="col d-none d-md-block">
+                        <div class="row">
+                            <div class="col-5">
+                                <a href="#">DOLAR</a>
+                            </div>
+                            <div class="col-7">
+                                97622.90 
+                                <span>1.81</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-none d-md-block">
+                        <div class="row">
+
+                            <div class="col-5">
+                                <a href="#">ALTIN</a>
+                            </div>
+
+                            <div class="col-7">
+                                97622.90 
+                                <span>1.81</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-4 col-sm-12 rowtop">
+                
+                <div class="row">
+
+                    <div class="haber col-md-6  col-lg-12 col-sm-12">
+                        {% for title in titleMansetNews  %}
+                            <a href="/{{title.category.name}}y/{{slugify(title.title, to_lower=True)}}-{{title.id}}">
+                                <p>{{title.title}}</p>
+                            </a>
+                        {% endfor %}
+                    </div>
+
+
+                    <div class="col-md-6  col-lg-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-6 d-sm-none d-md-block">
+                                <a href="/{{oneNews[0].category.name}}/{{slugify(oneNews[0].title, to_lower=True)}}-{{oneNews[0].id}}">
+                                    <p>{{oneNews[0].title}}</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <a href="/{{oneNews[0].category.name}}/{{slugify(oneNews[0].title, to_lower=True)}}-{{oneNews[0].id}}">
+                                    <img src="{{oneNews[0].sqimage}}" alt="" width="100%">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12  col-lg-12 col-sm-12">
+                        <img src="https://www.alocayyolu.com/wp-content/uploads/yerel-reklam.jpg" class="reklam" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sponsor d-none d-lg-block">
+            <div class="row">
+
+                <div class="col hidden-xs">
+                    <a href="#">Ekonomi</a>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                                        
+                        <div class="col-5">
+                            <a href="#">BIST</a>
+                        </div>
+    
+                        <div class="col-7">
+                            97622.90 
+                            <span>1.81</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+
+                        <div class="col-5">
+                            <a href="#">EURO</a>
+                        </div>
+                        <div class="col-7">
+                            97622.90 
+                            <span>1.81</span>
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="col hidden-xs">
+                    <div class="row">
+                        <div class="col-5">
+                            <a href="#">DOLAR</a>
+                        </div>
+                        <div class="col-7">
+                            97622.90 
+                            <span>1.81</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col hidden-xs">
+                    <div class="row">
+
+                        <div class="col-5">
+                            <a href="#">ALTIN</a>
+                        </div>
+
+                        <div class="col-7">
+                            97622.90 
+                            <span>1.81</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row rowtop">
+            {% for news in tripleNews2  %}
+
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="/{{news.category.name}}/{{slugify(news.title, to_lower=True)}}-{{news.id}}">
+                                    {{news.title}}
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="/{{news.category.name}}/{{slugify(news.title, to_lower=True)}}-{{news.id}}">
+                                    <img src="{{news.sqimage}}" width="100%">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+            {% endfor %}
+
+        </div>
+        <div class="row" style="margin-top:10px;">
+
+            <div class="col-lg-8 col-md-12">
+                <div class="slideshow3-container">
+                    {% for news in lastMansetNews %}
+                        <div class="mySlides3">
+                        <a href="/{{news.category.name}}/{{slugify(news.title, to_lower=True)}}-{{news.id}}">
+                            <img src="{{ news.hrimage }}" style="width:100%">
+                        </a>
+                        </div>
+                    {% endfor %}
+
+                    <div class="sliderbtn" id="mySlides3">
+                    </div>
+                </div>
+            </div>
+            <div class="pht col-md-4 col-sm-6">
+                <a href="/{{lastNews[0].category.name}}/{{slugify(lastNews[0].title, to_lower=True)}}-{{lastNews[0].id}}">
+                    <img src="{{lastNews[0].sqimage}}" width="100%">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Haber tıklandığında içeriğin dinamik olarak aktarıldığı kısım-->             
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-sm-12 col-12">
+            <div class="row">
+                <h1>{{detail[0].title}}</h1>
+
+                <small>{{detail[0].addtime}} | Son Güncelleme:{{detail[0].updattime}}</small>
+            </div>
+            <div class="row rowtop">
+                <img src={{detail[0].sqimage}} width="100%">
+            </div>
+            <div class="row">
+                <h4 style="margin:30px 0px 30px 0px;">{{detail[0].title2}}</h4>
+            </div>
+
+            <div class="row">
+                 
+                <p style="font-size:20px;">{{detail[0].text}}</p>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

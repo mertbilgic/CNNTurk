@@ -1,0 +1,624 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+/*Backend başladıktan sonra backend kısmında hesaba katmadığım bir işlem yüzünden bunu ekledim*/
+.container a{
+    text-decoration: none;
+    text-decoration-color: black;
+    color: black;
+}
+/*Tasarımda bazı satırların daha güzel gözükmesi için uygulandı*/
+.container .rowtop{
+    margin-top:10px
+}
+.slider img{
+    width:100%; 
+    height:200px;
+    margin-top:5px;
+    border-style: groove;
+}
+/*Navbar tasarımında kullanılan Cssler*/
+.tag{
+    display: flex;
+    justify-content: space-between;
+}
+.tag ul {
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.tag li{
+   float: left;
+}
+.bar{
+    margin-left: 120px;
+    width: 100%;
+}
+.tag a{
+    display: inline-block;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.tag a:hover{
+    color:red;
+}
+.tag .sep{
+
+    border-left: 1px solid gray;
+    margin: 8px 0px;
+    padding: 16px 2px;
+}
+.navbar{
+    background: #f5f5f5;
+    position: relative;
+}
+.icon{
+    top:-10px;
+    left: 0;
+    background: #ca0000;
+    position: absolute;
+}
+.icon  img{
+    width: 110px;
+    height: auto;
+    padding: 20px 10px;
+}
+.red_line{
+    height: 2px;
+    width: 100%;
+    background: #ca0000; 
+}
+.tag2 ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.tag2 li{
+    float: left;
+}
+.tag2 a{
+    display: block;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 7px;
+    font-size: 14px;   
+}
+.tag2 .sep2{
+    
+    border-left:1px solid gray;
+    margin-top: 8px;
+    padding: 8px 2px;
+    height: 16px;
+}
+.tag2 :hover{
+    color: red;
+}
+.nav_mobil{
+    background:	#C80000;
+    width: 100%;
+    height:60px;
+    display: none;
+
+}
+.nav_mobil .icon2{
+    background: #C00000 ;
+    position: absolute;
+}
+.nav_mobil .icon2  img{
+    width: 80px;
+    height: auto;
+    margin-top: 20px;
+}
+.nav_mobil .fa{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: auto; 
+}
+.tag2 .fa{
+    margin-top:5px;
+}
+.sponsor {
+    margin-top:7px; 
+}
+
+.sponsor .col{
+    background: #ca0000;
+    height: 62px;
+}
+.sponsor .col-7{
+    background: white;
+    font-size: 14px;
+    padding: 15px;
+}
+.sponsor .col-7 span{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+.sponsor a{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+    height: 62px;
+    text-decoration: none;
+}
+
+.sponsor2{
+    display: none;
+}
+
+.haber{
+    font-size: 14xp;
+    color: gray;
+}
+
+/*İconlar*/
+.social{
+    margin: 50px 10px;
+    text-align: center;
+}
+.so-icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border:2px solid #ddd;
+    box-shadow:0 1px;
+    color: #ddd;
+    font-size: 25px;
+    border-radius: 27px;
+    line-height: 2em;
+    margin:5px;
+}
+.social a{
+    text-decoration: none;
+    text-align: center;
+}
+.searchbar .srch{
+    background: white;
+    padding: 12px;
+    margin:0;
+}
+.searchbar .srch a{
+    display: flex;
+    justify-content: center;
+}
+.mst .searchbtn{
+    font-size: 24px;
+    padding: 5px;
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+}
+.mst .searchbtn:hover{
+    background: black;
+    color:black;
+}
+.searchbtn::before{
+    font-family:"FontAwesome";
+    content:"\f002";
+}
+.searchbtn:hover{
+    background: black;
+    color:white;
+}
+.facebookbtn::before{
+    font-family: "FontAwesome";
+    content: "\f09a";
+}
+.facebookbtn:hover{
+    background: white;
+    color:#4060A5;
+    border-color: #4060A5;
+}
+.navbar .facebookbtn:hover{
+    background: #4060A5;
+    color:white;
+}
+.statisticbtn::before{
+    font-family: "FontAwesome";
+    content: "\f080";
+}
+.statisticbtn:hover{
+    background: white;
+    color: tomato;
+    
+}
+
+.twitterbtn::before{
+    font-family: "FontAwesome";
+    content: "\f099";
+}
+.twitterbtn:hover{
+    background: white;
+    color: #00ABE3;
+    border-color: #00ABE3;
+}
+.navbar .twitterbtn:hover{
+    background: #00ABE3;
+    color: white;
+}
+
+.flipboardbtn::before{
+    font-family: "FontAwesome";
+    content: "\aa";
+}
+.flipboardbtn:hover{
+    background: white;
+    color: red;
+    border-color: red;
+}
+
+.tumblrbtn::before{
+    font-family:"FontAwesome";
+    content: "\f173";
+}
+.tumblrbtn:hover{
+    background: white;
+    color:#34526f;
+    border-color: #34526f;
+}
+.pinbtn::before{
+    font-family: "FontAwesome";
+    content: "\f0d3";
+}
+.pinbtn:hover{
+    background: white;
+    color: #c8232c ;
+    border-color: #c8232c ;
+}
+.youtubebtn::before{
+    font-family: "FontAwesome";
+    content: "\f167";
+}
+.youtubebtn:hover{
+    background: white;
+    color: red;
+    border-color: red;
+}
+.instagrambtn::before{
+    font-family: "FontAwesome";
+    content: "\f16d";
+}
+.settingbtn{
+    padding: 11px;
+    display: block;
+    background: white;
+    text-align: center;
+}
+.settingbtn::before{
+    font-family: "FontAwesome";
+    content: "\f013";
+}
+.settingbtn:hover{
+    background: white;
+    color: black;
+}
+.instagrambtn:hover{
+    background: white;
+    color: #8a3ab9;
+    border-color:#8a3ab9;
+}
+.navbar .instagrambtn:hover{
+    background: black;
+    color: white;
+}
+.rssbtn::before{
+    font-family: "FontAwesome";
+    content: "\f09e";
+}
+.rssbtn:hover{
+    background: white;
+    color: orange;
+    border-color: orange;
+}
+/*Footer*/
+.first-footer .fo-title{
+    font-size: 24px;
+    font-weight: 400;
+    color:#ca0000;
+}
+.first-footer ul{
+    list-style-type: none;
+
+}
+.first-footer li{
+    border-left: 1px dashed gray;
+    padding-left:3px;
+
+}
+.second-footer{
+    width: 100%;
+    background: rgba(238,238,238,.6);
+    padding-top:50px;
+    padding-bottom:20px; 
+    
+}
+.second-footer h6{
+    font-size: 12px;
+    text-align: center;
+}
+.second-footer .col-12{
+    display: flex;
+    justify-content: center;
+
+}
+.fo-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.third-footer{
+    background: #333;
+}
+.third-footer a{
+    color: #9d9d9d;
+    font-weight: 500;
+}
+.third-footer a:hover{
+    color: white;
+}
+.third-footer .container{
+    display:flex;
+    justify-content:center;
+}
+.fourth-footer{
+    background: #818181;
+    padding: 20px;
+}
+.fourth-footer .container{
+    display:flex;
+    justify-content:center;
+}
+.sep{
+    border-left: 1px solid gray;
+    margin: 8px 0px;
+    padding: 16px 2px;
+}
+.searchbar{
+    display: none;
+    
+}
+.navbar input{
+
+    margin-left:10px;
+    width: 100%;
+    padding: 11px 16px;
+}
+.menuBar{
+    display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+.slideshow-container img{
+    height: 230px;
+}
+.slideshow3-container img{
+    height: 290px;
+}
+.slideshow2-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+.sliderbtn{
+    position: absolute;
+    margin-top: -60px;
+}
+.sliderbtn ul{
+    overflow: hidden;
+    list-style-type: none;
+}
+.sliderbtn li{
+    float: left;
+}
+.sliderbtn a{
+    border-top: 2px solid red;
+
+    display: block;
+    background: white;
+    padding: 5px 12px 5px 12px;
+    margin: 5px;
+}
+.sliderbtn a:hover{
+
+    background: red;
+}
+.second-footer .mbl{
+    display: none;
+}
+.mst input{
+    margin-right: 0px;
+    width: 100%;
+    padding: 11px 16px;
+    border-style: none;
+}
+.mst .left{
+    width: 75%;
+    float: left;
+}
+.mst .mid{
+    width: 5%;
+    float: left;
+}
+.mst .right{
+    float: left;
+    width: 15%;
+}
+.mst .atag a{
+    display: block;
+    float: left;
+    padding: 3px;
+    color: grey;
+    font-size:12px; 
+}
+.mst .atag2{
+    padding: 4px;
+    border-style: solid; 
+    border-width: 1px 0px 1px 0px;
+    border-color: gray;
+    font-size: 12px;
+    color:gray;
+    display: flex;
+    justify-content: space-around;
+}
+.mst .atag2 a{
+margin: auto;
+}
+.mst .top{
+    
+    margin-top:30px;
+}
+.mailbtn::before{
+    font-family: "FontAwesome";
+    content: "\f0e0";
+}
+.plusbtn::before{
+    font-family: "FontAwesome";
+    content: "\f067";
+}
+.plusbtn{
+    display: block;
+    padding: 1px;
+    text-align: center;
+    background: gray;
+    font-size: 15px;
+}
+.plusbtn:hover{
+    background:darkblue;
+}
+.mail .left{
+    width: 5%;
+    float: left;
+}
+.mail .mid{
+    width: 80%;
+    float: left;
+}
+.mail .right{
+    width: 15%;
+    float: left;
+}
+.checkl{
+    width: 10%;
+    float: left;
+}
+.checkr{
+    float: left;
+    width: 90%;
+}
+/*istatistik kısmı */
+.statistic{
+    margin-top:10px; 
+    display: none;
+}
+.statistic ul{
+    list-style-type: none;
+}
+/*Navbar üzerinde ileride yapılan düzenlemeler */
+.navbar .left{
+    width:7.5%;
+}
+.navbar .right{
+    width: 90%;
+}
+.mobil_ddown ul{
+    list-style-type:none;
+    
+}
+.mobil_ddown a{
+    font-size: 15px;
+     display: block;
+     padding: 10px;
+
+}
+.mobil_ddown li{
+    border-bottom: 1px solid gray;
+}
+.mobil_ddown{
+    display: none;
+    background: #f5f5f5;
+    width: 100%;
+}
+.mobil_ddown .stn{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 992px) {
+    .navbar{
+
+        display: none;
+    }
+    .tag2{
+        display: none;
+    }
+    .red_line{
+      display: none;
+    }
+    .nav_mobil{
+        display:block;
+    }
+    .second-footer .mbl{
+        display: block;
+    }
+    .photo{
+        margin-top:10px;
+    }
+    .pht{
+        margin: 10px 10px 10px 0px;
+    }
+    .reklam{
+        padding-left:100px;
+        padding-right:100px;  
+        width: 100%; 
+        min-height: 312px;
+    }
+  }
+@media screen and (max-width: 1200px) {
+    .tag a{
+        display: inline-block;
+        color:black;
+        text-decoration: none;
+        text-align: center;
+        padding: 14px 12px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .reklam{
+        width: 100%; 
+        min-height: 225px;
+    }
+}
+@media screen and (min-width: 1200px) { 
+    .container{
+        width: 1000px;
+    }
+    .reklam{
+        width: 100%; 
+        min-height: 305px;
+    }
+}
+@media screen and (max-width: 768px) { 
+    .sponsor {
+        width: 100%;
+    }
+}
