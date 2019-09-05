@@ -8,7 +8,8 @@
           <th>İd</th>
           <th>Title</th>
           <th>addtime</th>
-          <th>category</th>      
+          <th>category</th>
+          <th>Delete</th>         
         </tr>
         
         {% for  news in allNews %}
@@ -17,6 +18,7 @@
             <td>{{news.title}}</td>
             <td>{{news.addtime}}</td>
             <td>{{news.category}}</td>
+            <td><a href="/deletenews?id={{news.id}}" class="btn btn-danger" st>Sil</a></td>
         </tr>
         {% endfor %}
       </table>

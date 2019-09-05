@@ -226,22 +226,16 @@ def uppdatenews():
     return render_template("updatenews.html",form=form)
 
 #Kayıtlı verinlerin silindiği kısım
-@app.route("/deletenews", methods=['GET', 'POST'])
+@app.route("/deletenews")
 @login_required
 def deletnews():
-    form = DeleteForm(request.form)
-    if request.method=="POST":
-        if form.id.data !="" and form.title.data!="":
-            News.query.filter_by(id=form.id.data,title=form.title.data).delete()
-        elif form.id.data !="":
-            News.query.filter_by(id=form.id.data).delete()
-        else:
-            News.query.filter_by(title=form.title.data).delete()
+    id = request.args.get('id')
+    if id !="":
+        News.query.filter_by(id=id).delete()
         db.session.commit()
-        return redirect(url_for("dashboard"))
-
-    return render_template("deletenews.html",form=form)
-        
+    else:
+        print("Eksik veri")     
+    return redirect(url_for("dashboard"))
 
 #Sistemdeki kayıtlı haberlerin listelendiği kısım
 @app.route("/registerednews",methods=["GET","POST"])
@@ -277,7 +271,7 @@ def newsDetail(category="haberdetay",name="deneme",post_id=47):
         
 #debug=true modunda hata çalıştırıldığında hata ile karşılaşabilirsiniz
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
 
 
 
