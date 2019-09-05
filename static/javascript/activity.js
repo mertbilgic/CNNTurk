@@ -9,6 +9,8 @@
         }
         else{
             $(".searchbar").show();
+            $("#search").focus();
+            //document.getElementById("search").focus();
             $(".tag").hide();
         }
     });
