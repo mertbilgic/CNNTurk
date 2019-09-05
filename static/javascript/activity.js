@@ -5,12 +5,13 @@
         console.log("searchbtn")
         if($(".searchbar").is(":visible")){
             $(".searchbar").hide();
+            $("#himg").css({ opacity: 1 });
             $(".tag").show();
         }
         else{
             $(".searchbar").show();
             $("#search").focus();
-            //document.getElementById("search").focus();
+            $("#himg").css({ opacity: 0.5 });
             $(".tag").hide();
         }
     });
