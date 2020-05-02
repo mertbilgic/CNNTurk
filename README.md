@@ -6,7 +6,7 @@
 
 ```sh
 git clone https://github.com/mertbilgic/PythonFlaskCnn
-cd books
+cd PythonFlaskCnn
 virtualenv --python=/usr/local/bin/python3.8  venv
 ```
 
