@@ -1,0 +1,6 @@
+Flask==1.1.2
+Flask-WTF==0.14.3
+Flask-SQLAlchemy==2.4.1
+awesome-slugify==1.6.5
+Flask-CKEditor==0.4.4.1
+psycopg2-binary==2.8.5
